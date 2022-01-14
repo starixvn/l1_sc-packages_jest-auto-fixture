@@ -1,0 +1,36 @@
+{
+    "name": "jest-micro-auto-stub",
+    "version": "0.0.0",
+    "description": "Auto mocking test data, using for SC internally",
+    "main": "index.js",
+    "scripts": {
+        "verpatch": "npm version patch",
+        "verminor": "npm version minor",
+        "betaver": "npm version prerelease --preid beta",
+        "pub": "npm publish --registry https://npm.lumigame.com",
+        "pubbeta": "npm publish --registry https://npm.lumigame.com --tag beta"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://git3.nexdev.net/sc-packages/jest-auto-fixture.git"
+    },
+    "keywords": [
+        "jest",
+        "auto-stub"
+    ],
+    "author": "pentagon",
+    "license": "ISC",
+    "devDependencies": {
+        "@commitlint/cli": "^9.1.2",
+        "@commitlint/config-conventional": "^9.1.2",
+        "husky": "^4.2.5",
+        "install": "^0.13.0",
+        "sc-semantic-release": "^1.2.0"
+    },
+    "type": "module",
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}
