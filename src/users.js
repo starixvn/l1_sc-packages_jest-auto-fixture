@@ -2,7 +2,7 @@ import { Chance } from "chance";
 
 function UserSession(username = "", browserAgent = "") {
     const chance = new Chance();
-    
+
     return {
         userId: chance.guid(),
         username: username ?? chance.name(),
