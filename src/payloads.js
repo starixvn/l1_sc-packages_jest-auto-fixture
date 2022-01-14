@@ -10,4 +10,4 @@ function SignInPayload(username, browserAgent) {
     };
 }
 
-export default { SignInPayload };
+export { SignInPayload };

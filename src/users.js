@@ -18,4 +18,4 @@ function UserInfo() {
     };
 }
 
-export default { UserSession, UserInfo };
+export { UserSession, UserInfo };
