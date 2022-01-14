@@ -2,7 +2,7 @@
     "name": "jest-auto-fixture",
     "version": "0.0.1-beta.1",
     "description": "Auto mocking test data, using for SC internally",
-    "main": "index.js",
+    "main": "./src/index.js",
     "scripts": {
         "verpatch": "npm version patch",
         "verminor": "npm version minor",
@@ -16,7 +16,8 @@
     },
     "keywords": [
         "jest",
-        "auto-stub"
+        "fixture",
+        "auto-data"
     ],
     "author": "pentagon",
     "license": "ISC",
