@@ -1,5 +1,5 @@
 {
-    "name": "jest-micro-auto-stub",
+    "name": "jest-auto-fixture",
     "version": "0.0.0",
     "description": "Auto mocking test data, using for SC internally",
     "main": "index.js",
