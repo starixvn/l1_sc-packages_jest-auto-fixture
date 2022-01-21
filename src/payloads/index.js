@@ -1,3 +1,3 @@
-import { SignInPayload } from "./sign-payloads";
+import { SignIn } from "./signin";
 
-export { SignInPayload };
+export { SignIn as SignInPayload };

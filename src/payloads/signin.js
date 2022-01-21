@@ -1,11 +1,11 @@
-import { UserSession } from "../models/user-info";
+import { UserSession } from "../models/user-session";
 import * as randomHelper from "../helpers/random-helpers";
 import { Chance } from "chance";
 
-export const SignInPayload = (custom = {}) => {
+export const SignIn = (custom = {}) => {
     return {
         ss: UserSession({ username: custom.username, browserUserAgent: custom.browserUserAgent }),
-        username: randomHelper.randomName(username),
+        username: randomHelper.randomName(custom.username),
         isAuthenticated: randomHelper.randomBool(custom.isAuthenticated),
         isSSO: randomHelper.randomBool(custom.isSSO),
         language: randomHelper.randomLanguage(custom.language),

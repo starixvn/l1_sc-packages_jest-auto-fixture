@@ -3,7 +3,7 @@ import * as randomHelper from "../helpers/random-helpers";
 
 export const UserInfo = (custom = {}) => {
     const chance = new Chance();
-    const maxBet = randomHelper.randomInteger(custom.maxBet);
+    const maxBet = randomHelper.randomInteger(custom.maxBet ?? 1000);
 
     return {
         name: randomHelper.randomName(custom.name),
@@ -12,7 +12,7 @@ export const UserInfo = (custom = {}) => {
         banned: randomHelper.randomBool(custom.banned),
         currency: randomHelper.randomCurrency(custom.currency),
         disabled: randomHelper.randomBool(custom.disabled),
-        id: randomHelper.randomGuid(id),
+        id: randomHelper.randomGuid(custom.id),
         inGameRoom: custom.inGameRoom,
         isSignedInSM: randomHelper.randomBool(custom.isSignedInSM),
         joinedOn: chance.date(),
