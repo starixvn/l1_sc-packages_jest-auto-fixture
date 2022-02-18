@@ -1,6 +1,6 @@
 import { Chance } from "chance";
 import * as randomHelper from "../helpers/random-helpers";
-import { Choices } from "./choice";
+import { Odds, MaxBetPerChoice } from "./properties";
 
 export const Bet = (custom = {}) => {
     const basicBet = {
@@ -18,31 +18,7 @@ export const Bet = (custom = {}) => {
     };
 
     basicBet.odds = custom.odds ?? Odds();
-    const amountOnBetChoices = custom.amountOnBetChoices ?? BetChoiceAmount();
+    const amountOnBetChoices = custom.amountOnBetChoices ?? MaxBetPerChoice();
 
     return { ...basicBet, ...amountOnBetChoices };
-};
-
-export const Odds = () => {
-    const chance = new Chance();
-    const generatedChoices = Choices();
-    const odds = {};
-
-    generatedChoices.forEach((choice) => {
-        odds[choice] = chance.floating({ min: 0, fixed: 2, max: 100 });
-    });
-
-    return odds;
-};
-
-export const BetChoiceAmount = () => {
-    const chance = new Chance();
-    const generatedChoices = Choices();
-    const bet = {};
-
-    generatedChoices.forEach((choice) => {
-        bet[choice] = chance.integer({ min: 1, max: 2000 });
-    });
-
-    return bet;
 };

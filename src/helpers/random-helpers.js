@@ -8,8 +8,8 @@ export const randomName = (value) => {
     return value ?? new Chance().name();
 };
 
-export const randomInteger = (value) => {
-    return value ?? new Chance().integer({ min: 0 });
+export const randomInteger = (value, min = 0) => {
+    return value ?? new Chance().integer({ min });
 };
 
 export const randomBool = (value) => {
