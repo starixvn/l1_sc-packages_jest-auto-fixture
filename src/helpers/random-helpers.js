@@ -9,7 +9,7 @@ export const randomName = (value) => {
 };
 
 export const randomInteger = (value) => {
-    return value ?? new Chance().integer();
+    return value ?? new Chance().integer({ min: 0 });
 };
 
 export const randomBool = (value) => {
