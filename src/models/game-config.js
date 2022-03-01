@@ -1,7 +1,7 @@
 import { randomBool, randomInteger, randomName } from "../helpers/random-helpers";
 import { Odds, MaxBetPerChoice } from "./properties";
 
-export const Config = (custom = {}) => {
+export const GameConfig = (custom = {}) => {
     return {
         type: 0,
         name: randomName(custom.name),
